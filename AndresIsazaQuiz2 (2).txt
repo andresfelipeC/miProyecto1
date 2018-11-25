@@ -1,0 +1,36 @@
+BEGINNING-OF-PROGRAM
+	
+	DEFINE-NEW-INSTRUCTION instruction1 AS
+	BEGIN
+		putbeeper;
+		putbeeper;
+		putbeeper;
+		IF front-is-clear THEN
+		BEGIN
+			move
+		END
+		ELSE
+		 
+		BEGIN 
+			turnleft;
+			  
+			turnleft;
+			turnleft; 
+			
+			move		
+		END;	
+		IF left-is-clear THEN
+		BEGIN
+			turnleft
+		END
+	END;
+	BEGINNING-OF-EXECUTION
+		WHILE not-next-to-a-beeper DO
+		BEGIN    
+			instruction1  
+					
+		END;
+	
+		turnoff   
+	END-OF-EXECUTION
+END-OF-PROGRAM
