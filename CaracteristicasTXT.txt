@@ -1,0 +1,6 @@
+Instrucciones:
+move
+turnleft
+pickbeeper
+putbeeper
+turnoff

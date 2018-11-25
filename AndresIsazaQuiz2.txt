@@ -1,0 +1,25 @@
+BEGINNING-OF-PROGRAM
+	BEGINNING-OF-EXECUTION
+		turnleft;
+		IF not-facing-north THEN
+		BEGIN
+			move
+		END;
+		ELSE
+		BEGIN
+			turnleft
+		END;
+		turnleft;
+		IF not-facing-west THEN
+		BEGIN
+			move;
+			move
+		END
+		ELSE
+		BEGIN
+			turnleft
+		END;
+		turnoff
+	END-OF-EXECUTION
+	
+END-OF-PROGRAM
