@@ -1,0 +1,143 @@
+Help on module v8:
+
+NAME
+    v8
+
+CLASSES
+    builtins.object
+        Karel
+    
+    class Karel(builtins.object)
+     |  Karel(facing=0, x=0, y=0, beepers=0)
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, facing=0, x=0, y=0, beepers=0)
+     |      x, y son las coordenadas. facing: 0 es este, 1 es norte, 2 es oeste, 3 es sur.
+     |  
+     |  __str__(self)
+     |      Este metodo permite imprimir en la consola a lo que hace karel
+     |  
+     |  execute(self, listaejecu)
+     |      Lee cada funcion en una lista y la ejecuta debidamente, busca en un diccionario las
+     |      funciones que no entiende, si no esta en el diccionario levanta error de lexico.
+     |      Imprime en consola el comando ejecutado y el nuevo estado de karel
+     |  
+     |  executionerror(self)
+     |      levanta error de ejecucion
+     |  
+     |  facingeast(self)
+     |      Evalua si karel esta orientada al este
+     |  
+     |  facingnorth(self)
+     |      Evalua si karel esta orientada al norte
+     |  
+     |  facingsouth(self)
+     |      Evalua si karel esta orientada al sur
+     |  
+     |  facingwest(self)
+     |      Evalua si karel esta orientada al oeste
+     |  
+     |  isclear(self, direc)
+     |      Evalua si la direccion indicada esta bloqueada. 
+     |      CERO ES PARA FRONT, 1 PARA LEFT, -1 PARA RIGHT
+     |  
+     |  lexicerror(self)
+     |      Levanta error de lexico
+     |  
+     |  move(self)
+     |      Mueve a karel 50 unidades, guarda las nuevas coordenadas en self.x, self.y. 
+     |      Es util dado que a veces al pedir las coordenadas de turtle hay problemas con los decimales
+     |  
+     |  nexttoabeeper(self)
+     |      Evalua si karel esta sobre un beeper
+     |  
+     |  pickbeeper(self)
+     |      Si no hay beepers devuelve un error, si hay beepers suma 1 a self.beepers. Borra el numero
+     |      de beepers que estaba escrito antes y si queda mas de un beeper en el lugar escribe el numero
+     |      que queda
+     |  
+     |  putbeeper(self)
+     |      Si no tiene beepers karel, devuelve un error. Situa un beeper en la posicion de karel, 
+     |      disminuye 1 a self.beepers
+     |  
+     |  turnleft(self)
+     |      Cambia el facing a la izquierda, mueve a karel a la izquierda
+     |  
+     |  turnoff(self)
+     |      Cambia el titulo a -karel se ha apagado-
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+FUNCTIONS
+    EJECUTARESTE()
+        Comienza a ejecutar la programacion compilada con karel orientandose al este
+    
+    EJECUTARNORTE()
+        Comienza a ejecutar la programacion compilada con karel orientandose al norte
+    
+    EJECUTAROESTE()
+        Comienza a ejecutar la programacion compilada con karel orientandose al oeste
+    
+    EJECUTARSUR()
+        Comienza a ejecutar la programacion compilada con karel orientandose al sur
+    
+    FACING(x, y)
+        Recibe unas coordenadas y posiciona a karel en el centro del cuadrante donde estan ubicadas,
+        luego activa comandos onkey para determinar su orientacion
+    
+    POSICIONAR()
+        Cambia el onscreenclick para que lea donde posicionar a Karel
+    
+    exitf()
+        Cambia el onscreenclick para que lea donde posicionar los beepers
+    
+    iracentro(x, y)
+        Recibe unas coordenadas y situa la tortuga en el centro del cuadrante
+    
+    situarbeeper(x, y)
+        Recibe unas coordenadas y situa un beeper en la esquina del cuadrante, guarda los beepers
+        en un diccionario. Si hay mas de un beeper en la esquina, dibuja el numero de beepers que hay
+    
+    situarmuros(x, y)
+        Recibe unas coordenadas y situa muros hasta estas coordenadas, ubicandolos en el centro
+        de los cuadrantes, guarda la ubicacion de los muros en una lista
+    
+    tolist(contador, listraw)
+        Recibe una lista de lineas y las almacena en una nueva lista, quitando las cadenas vacias,
+        limpiando de espacios y tabulaciones el final de la cadena, almacenando en una sublista los cuerpos
+        de los comandos de tipo ITERATE, WHILE, IF, DEFINE (identificados por no tener ; al final y no ser 
+        turnoff ni END ni ELSE ni BEGIN)
+
+DATA
+    a = 'instruction1'
+    beepers = {}
+    bep = <turtle.Turtle object>
+    definiciones = [['DEFINE-NEW-INSTRUCTION instruction1 AS', 'putbeeper;...
+    definicionesraw = ['BEGINNING-OF-PROGRAM', '\tDEFINE-NEW-INSTRUCTION i...
+    diccionario = {'instruction1;': ['putbeeper;', 'putbeeper;', 'putbeepe...
+    ejecucion = [['WHILE not-next-to-a-beeper DO', 'instruction1;'], 'turn...
+    ejecucionraw = ['\t\tEND;', 'turnoff', '\tEND-OF-EXECUTION', 'END-OF-P...
+    i = 4
+    karel = <v8.Karel object>
+    kl = <turtle.Turtle object>
+    linea = 7
+    macrobloques = ['BEGINNING-OF-PROGRAM\n\t\n\tDEFINE-NEW-INSTRUCTION i....
+    miArchivo = <_io.TextIOWrapper name='AndresIsazaQuiz2 (2).txt' mode='r...
+    muros = []
+    numbep = 9999
+    visualk = <turtle.Turtle object>
+    wn = <turtle._Screen object>
+    x = 35
+
+FILE
+    /Users/Programacion-Universidad/Documents/carpeta/v8.py
+
+
